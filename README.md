@@ -1,8 +1,5 @@
 # Cloud-native Microservice Architecture Example
 
-<!-- #### Credit to [Velotio](https://www.velotio.com/engineering-blog/build-a-containerized-microservice-in-golang) for laying the groundwork to build up on -->
-
-
 ## What kind of overall service this application provides:
 
 Developing a cloud-native web application taht works on the following problem statement:
@@ -74,3 +71,10 @@ project
 ├── README.md
 └── .gitignore
 ```
+
+
+## Credits:
+
+Credit to [Ayushu](https://www.velotio.com/engineering-blog/build-a-containerized-microservice-in-golang) for laying the groundwork to build up on 
+
+Credit to [kcq & co](https://github.com/golang-standards/project-layout) for some-what standarising go-lang project layout
