@@ -2,18 +2,19 @@ package teamplay
 
 import (
 	"context"
-
-	"github.com/AlexIsOpAf/microservice-architecture-example/internal"
 )
 
-/* Context enables microservices to access each goroutine request */
+/* Methods exposed from our microservice */
 type Service interface {
 	/** Return a list of all registered teams **/
-	Get(ctx context.Context, filter ...internal.Filter) ([]internal.Team, error)
+	GetWithID(ctx context.Context, uuid string) (Team, error)
 
-	/** Create the team and return the name of the team **/
-	Create(ctx context.Context, team *internal.Team) (string, error)
+	/** Create the team and return the uuid of the team **/
+	Create(ctx context.Context, teamName, playerName string) (string, error)
 
 	/** Add user to team **/
-	Add(ctx context.Context, uuid string) error
+	Add(ctx context.Context, teamID, userID string) error
+
+	/* Returns stats of the service */
+	ServiceStatus(ctx context.Context) (int, error)
 }
